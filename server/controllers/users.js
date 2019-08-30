@@ -1,10 +1,6 @@
-/* eslint-disable consistent-return */
-/* eslint-disable dot-notation */
-/* eslint-disable no-param-reassign */
-/* eslint-disable no-underscore-dangle */
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import ModelUser from '../models/user.js.js';
+import ModelUser from '../models/user.js';
 import config from '../configs';
 
 const UserController = {
