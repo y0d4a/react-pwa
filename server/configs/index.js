@@ -10,7 +10,7 @@ export default {
     port: env.PORT || 12000,
     secretKey: env.SECRET_KEY
 };
-
+// Config mongo database
 const mongoDB = 'mongodb://127.0.0.1:27017/fullstack';
 mongoose.connect(mongoDB, {
     useNewUrlParser: true,
