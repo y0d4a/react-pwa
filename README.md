@@ -6,9 +6,9 @@ Build project base on:
 Plugin: Webpack 4, Babel 7, Nodemon 
 
 To pull project:
-git clone https://github.com/duongagangiang/fullstack_nodejs_reactjs.git
+git clone https://github.com/duongagangiang/react-pwa.git
 
-Step 1: <code>cd fullstack_nodejs_reactjs</code>
+Step 1: <code>cd react-pwa</code>
 
 Step 2: <code>npm install</code> or <code>yarn</code> to install package in <b>package.json</b>
 
@@ -18,7 +18,7 @@ Step 4: You need to prepare mongo DB. You can use mongo DB on cloud: https://clo
 
 Step 5: Open project with Editor as vscode or nodepad++. Then you go to <code>server/configs/index.js</code> to config mongo database.
 
-Step 6: Open terminal or cmd in fullstack_nodejs_reactjs and run <code>npm start</code> or <code>yarn start</code>
+Step 6: Open terminal or cmd in react-pwa and run <code>npm start</code> or <code>yarn start</code>
 
 Step 7: Open browser <code>http://localhost:12000</code> and enjoy it.  
 
