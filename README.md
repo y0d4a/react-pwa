@@ -22,4 +22,4 @@ Step 6: Open terminal or cmd in react-pwa and run <code>npm start</code> or <cod
 
 Step 7: Open browser <code>http://localhost:12000</code> and enjoy it.  
 
->Notes: if you have issue with install package, you can use 'yarn' to install package
+>Notes: if you have issue with install package, you can use 'yarn' to install packages
