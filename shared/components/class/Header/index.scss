@@ -1,0 +1,57 @@
+@import '../../App.scss';
+
+nav.d-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, .95);
+    z-index: 1;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+nav .d-logo {
+    font-size: 30px;
+    a {
+        display: flex;
+    }
+}
+ul.d-menu-main {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+}
+ul.d-menu-main li {
+    list-style: none;
+    padding: 15px;
+}
+ul.d-menu-main li:not(:last-child) {
+    margin-right: 5px;
+}
+ul.d-menu-main li a {
+    text-decoration: none;
+    color: #000;
+}
+ul.d-menu-main li:hover {
+    background: map-get($map: $color, $key: textHover);
+}
+ul.d-menu-main li:hover a {
+    color: map-get($map: $color, $key: light);
+}
+@media (max-width: 991px) {
+    nav.d-header .d-logo {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    ul.d-menu-main {
+        display: none;
+    }
+}
+.spacer {
+    flex: 1;
+}

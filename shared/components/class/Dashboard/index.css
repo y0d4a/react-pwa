@@ -1,0 +1,300 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: Poppins, sans-serif;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  body {
+    width: 100%;
+  }
+}
+
+#root {
+  margin: 0 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  color: #2495B5;
+}
+
+.d-top-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.d-top-container .showcase {
+  width: 60%;
+  padding: 1rem;
+  margin: 1rem;
+  color: #fff;
+  background: #bbb;
+}
+
+.d-top-container .showcase .poster {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.d-top-container .showcase .poster .LazyLoad {
+  width: 100%;
+}
+
+.d-top-container .showcase .poster .LazyLoad img {
+  position: relative;
+  width: 100%;
+}
+
+.d-top-container .showcase .details {
+  position: relative;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.d-top-container .showcase .details h1 {
+  font-size: 3rem;
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.d-top-container .showcase .details p {
+  font-size: 1.3rem;
+  margin-top: 0;
+  color: #fff;
+}
+
+.d-top-container .d-top-box {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+}
+
+.d-top-container .d-top-box .d-top-box-a {
+  background: #bbb;
+  padding: 1rem;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.d-top-container .d-top-box .d-top-box-a .LazyLoad {
+  width: 30%;
+  margin-right: 1rem;
+}
+
+.d-top-container .d-top-box .d-top-box-a .LazyLoad img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.d-top-container .d-top-box .d-top-box-a .d-top-box-a-text {
+  width: 70%;
+}
+
+.d-top-container .d-top-box .d-top-box-a:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.d-boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 1rem;
+}
+
+.d-boxes .d-box {
+  background: #bbb;
+  color: #fff;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 25%;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.d-boxes .d-box a {
+  color: #fff;
+}
+
+.d-boxes .d-box:not(:last-child) {
+  margin-right: 1rem;
+}
+
+@media (max-width: 991px) {
+  .d-top-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .d-top-container .showcase {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  .d-top-container .showcase .poster {
+    padding: 1rem;
+  }
+  .d-top-container .showcase .details {
+    padding: 0 1rem 1rem 1rem;
+  }
+  .d-top-container .showcase .details h1 {
+    font-size: 2rem;
+  }
+  .d-top-container .d-top-box {
+    padding: 0;
+    margin-top: 1rem;
+    color: #f0f1f5;
+    width: 100%;
+  }
+  .d-top-container .d-top-box .d-top-box-a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .d-top-container .d-top-box .d-top-box-a .d-top-box-a-text {
+    margin-left: 1rem;
+  }
+  .d-top-container .d-top-box .d-top-box-a .LazyLoad {
+    width: 30%;
+  }
+  .d-top-container .d-top-box .d-top-box-a .LazyLoad img {
+    width: 100%;
+  }
+  .d-boxes {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .d-boxes .d-box {
+    margin-top: 1rem;
+  }
+  .d-boxes .d-box:not(:last-child) {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .d-top-container .showcase .details h1 {
+    font-size: 1.3rem;
+  }
+  .d-top-container .showcase .details p {
+    font-size: 1rem;
+  }
+  .d-top-container .d-top-box .d-top-box-a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .d-top-container .d-top-box .d-top-box-a .LazyLoad {
+    width: 100%;
+    margin-right: 0;
+  }
+  .d-top-container .d-top-box .d-top-box-a .LazyLoad img {
+    width: 100%;
+  }
+  .d-top-container .d-top-box .d-top-box-a .d-top-box-a-text {
+    margin-left: 0;
+    width: 100%;
+  }
+  .d-top-container .d-top-box .d-top-box-a .d-top-box-a-text h4 {
+    font-size: 1rem;
+  }
+  .d-boxes {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .d-boxes .d-box:first-child {
+    margin-top: 0;
+  }
+  .d-boxes .d-box {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+/*# sourceMappingURL=index.css.map */

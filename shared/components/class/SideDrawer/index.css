@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: Poppins, sans-serif;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  body {
+    width: 100%;
+  }
+}
+
+#root {
+  margin: 0 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  color: #2495B5;
+}
+
+.d-sidedrawer {
+  height: 100%;
+  position: fixed;
+  background: #fff;
+  width: 70%;
+  max-width: 400px;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+.d-sidedrawer ul {
+  list-style: none;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.d-sidedrawer ul li {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.d-sidedrawer ul li ul {
+  padding-left: 0.5rem;
+}
+
+.d-sidedrawer ul li ul li:hover {
+  background: #333;
+}
+
+.d-sidedrawer ul li ul li:hover a {
+  color: #fff;
+}
+
+.open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+@media (min-width: 992px) {
+  .d-sidedrawer {
+    display: none;
+  }
+}
+/*# sourceMappingURL=index.css.map */

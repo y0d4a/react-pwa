@@ -1,0 +1,33 @@
+$color: (
+    primary: #F1F2F3,
+    dark: #333,
+    light: #68A225,
+    shadow: 0 1px 5px rgba(104, 104, 104, 0.8),
+    empty: transparent,
+    textHover: #042A2B,
+    darkPrimary: #F1F2F3,
+    superBlack: #000000,
+    textPrimary: #265C00,
+    descriptionTextColor: #555555
+);
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Poppins';
+    margin: 0 auto;
+    width: 100%;
+}
+@media (max-width: 700px) {
+    body {
+        width: 100%;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: map-get($map: $color, $key: dark);
+}
+a:hover {
+    color: map-get($map: $color, $key: textHover);
+}

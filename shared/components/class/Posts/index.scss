@@ -1,0 +1,67 @@
+@import '../../App.scss';
+
+.d-posts {
+    width: 70%;
+    margin: 0 auto;
+    .d-posts-left {
+        float: left;
+        width: 60%;
+        .d-posts-left-new-subject {
+            background: map-get($map: $color, $key: primary);
+            padding: 1rem;
+        }
+        .d-posts-left-new-subject img {
+            position: relative;
+            width: 100%;
+        }
+    }
+
+    .d-posts-right {
+        float: left;
+        width: 40%;
+        ul {
+            margin: 0 0 0 1rem;
+            padding: 0;
+            li:not(:last-child) {
+                margin: 0 0 0.5rem 0;
+            }
+        }
+        ul > li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            background: map-get($map: $color, $key: primary);
+        }
+        ul li .LazyLoad {
+            max-width: 30%;
+            padding: 1rem;
+        }
+        ul li .LazyLoad img {
+            max-width: 100%;
+        }
+        ul li p {
+            max-width: 70%;
+        }
+        ul li p a {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .d-posts {
+        width: 100%;
+        .d-posts-left {
+            width: 100%;
+        }
+        .d-posts-right {
+            width: 100%;
+            ul {
+                margin: 0;
+                li:first-child {
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+    }
+}

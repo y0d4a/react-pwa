@@ -1,34 +1,76 @@
 const path = require('path');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
+const BrotliPlugin = require('brotli-webpack-plugin');
 
 module.exports = {
     entry: {
-        bundle: './client/index.js'
+        app: [
+            '@babel/polyfill/noConflict',
+            './client/index.js'
+        ],
+        serviceWorker: './client/serviceWorker.js'
     },
     output: {
         path: path.join(__dirname, '/public'),
-        filename: 'bundle.js',
+        filename: 'js/[name].js',
         publicPath: '/'
     },
-    mode: 'production',
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.js?$/,
                 use: 'babel-loader',
                 exclude: /node_modules/
+            },
+            {
+                test: /\.html$/,
+                use: ["html-loader"]
+            },
+            {
+                test: /\.(svg|png|jpg|jpeg|gif)$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[hash].[ext]',
+                        outputPath: 'images'
+                    }
+                }
+            },
+            {
+              test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+              use: [
+                {
+                  loader: 'file-loader',
+                  options: {
+                    name: '[name].[ext]',
+                    outputPath: 'fonts/'
+                  }
+                }
+              ]
             }
         ]
     },
     plugins: [
-        new HTMLWebpackPlugin({
-			template: '!!raw-loader!./server/views/index.ejs',
-			filename: '../server/views/index.ejs', //for me, output file is index.ejs only and not
-			minify: {
-				removeComments: true,
-				collapseWhitespace: true,
-				conservativeCollapse: true
-			}
+        new CleanWebpackPlugin(),
+        new CopyWebpackPlugin([
+            { from: 'assets', to: '' },
+            { from: 'client/sw.js', to: ''}
+        ]),
+        new CompressionPlugin({
+            filename: '[path].br[query]',
+            algorithm: 'gzip',
+            test: /\.js$|\.css$|\.html$/,
+            threshold: 10240,
+            minRatio: 0.7
+        }),
+        new BrotliPlugin({
+            asset: '[path].br[query]',
+            test: /\.js$|\.css$|\.html$/,
+            threshold: 10240,
+            minRatio: 0.7
         })
-    ]
+    ],
+    devtool: 'inline-source-map'
 }

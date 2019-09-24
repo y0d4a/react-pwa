@@ -1,0 +1,7 @@
+@import '../../App.scss';
+
+.d-flashscreen {
+    width: 100%;
+    height: 100%;
+    background: map-get($map: $color, $key: light);
+}
