@@ -10,7 +10,8 @@
     "build:dev": "webpack-dev-server --config webpack.dev.js --open google-chrome",
     "build": "webpack --config webpack.prod.js && node ./server/run.js",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build"
+    "deploy": "gh-pages -b master -d build",
+    "heroku-postbuild": "heroku-nextjs-build"
   },
   "keywords": [],
   "author": "",
