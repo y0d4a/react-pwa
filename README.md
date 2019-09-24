@@ -10,14 +10,16 @@ git clone https://github.com/duongagangiang/fullstack_nodejs_reactjs.git
 
 Step 1: <code>cd fullstack_nodejs_reactjs</code>
 
-Step 2: <code>npm install</code> to install package in <b>package.json</b>
+Step 2: <code>npm install</code> or <code>yarn</code> to install package in <b>package.json</b>
 
-Step 3: <code>npm run build</code> to webpack bundle react code to js code.
+Step 3: <code>npm start</code> to webpack bundle react code to js code and start node server.
 
 Step 4: You need to prepare mongo DB. You can use mongo DB on cloud: https://cloud.mongodb.com or you can use mongo image: https://hub.docker.com/_/mongo to run in evironment docker.
 
 Step 5: Open project with Editor as vscode or nodepad++. Then you go to <code>server/configs/index.js</code> to config mongo database.
 
-Step 6: Open terminal or cmd in fullstack_nodejs_reactjs and run <code>npm run dev</code>
+Step 6: Open terminal or cmd in fullstack_nodejs_reactjs and run <code>npm start</code> or <code>yarn start</code>
 
-Step 7: Open browser <code>http://localhost:12000/api-v1</code> and enjoy it.  
+Step 7: Open browser <code>http://localhost:12000</code> and enjoy it.  
+
+>Notes: if you have issue with install package, you can use 'yarn' to install package
