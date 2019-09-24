@@ -11,7 +11,8 @@ export default {
     secretKey: env.SECRET_KEY
 };
 // Config mongo database
-const mongoDB = 'mongodb://192.168.88.181:27017/fullstack';
+// const mongoDB = 'mongodb://192.168.88.181:27017/fullstack';
+const mongoDB = 'mongodb+srv://pnhduong:12110116@cluster0-euugq.mongodb.net/fullstack?retryWrites=true&w=majority'
 mongoose.connect(mongoDB, {
     useNewUrlParser: true,
     useCreateIndex: true
